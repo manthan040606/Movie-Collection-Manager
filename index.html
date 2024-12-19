@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Collection Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Movie Collection Manager</h1>
+    </header>
+
+    <main>
+        <!-- Form to add a new movie -->
+        <section id="add-movie">
+            <h2>Add a New Movie</h2>
+            <form id="movie-form">
+                <input type="text" id="title" placeholder="Movie Title" required>
+                <input type="text" id="genre" placeholder="Genre" required>
+                <input type="number" id="rating" placeholder="Rating" step="0.1" min="0" max="10" required>
+                <input type="number" id="releaseYear" placeholder="Release Year" required>
+                <button type="submit">Add Movie</button>
+            </form>
+        </section>
+
+        <!-- Display movies by genre -->
+        <section id="list-movies">
+            <h2>Movies by Genre</h2>
+            <input type="text" id="genre-filter" placeholder="Enter genre to filter">
+            <button onclick="listMoviesByGenre()">Filter</button>
+            <ul id="movie-list"></ul>
+        </section>
+
+        <!-- Display highest rated movie -->
+        <section id="highest-rated">
+            <h2>Highest Rated Movie</h2>
+            <p id="highest-rated-movie"></p>
+        </section>
+
+        <!-- Display all movie titles -->
+        <section id="all-titles">
+            <h2>All Movie Titles</h2>
+            <ul id="title-list"></ul>
+        </section>
+
+        <!-- Display movies after a certain year -->
+        <section id="after-year">
+            <h2>Movies Released After a Year</h2>
+            <input type="number" id="year-filter" placeholder="Enter year">
+            <button onclick="findMoviesAfterYear()">Filter</button>
+            <ul id="year-list"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Movie Collection Manager - 2024</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
